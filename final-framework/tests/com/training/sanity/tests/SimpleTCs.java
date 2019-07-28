@@ -45,7 +45,7 @@ public class SimpleTCs {
 		driver.close();
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void createNewAccount() {
 			homePagePOM.clickSignUpBtn();
 			screenShot.captureScreenShot("First");
@@ -69,6 +69,16 @@ public class SimpleTCs {
 			screenShot.captureScreenShot("Tenth");
 			homePagePOM.registerbutton();
 			screenShot.captureScreenShot("Eleven");
+	}
+	@Test(enabled=true)
+	public void loginAsTeacher()
+	{
+		homePagePOM.loginUsername();
+		screenShot.captureScreenShot("loginUsername");
+		homePagePOM.loginPassword();
+		screenShot.captureScreenShot("loginPassword");
+		homePagePOM.loginButton();
+		screenShot.captureScreenShot("loginButton");
 	}
 	
 	

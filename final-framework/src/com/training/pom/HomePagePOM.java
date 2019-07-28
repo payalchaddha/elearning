@@ -45,9 +45,17 @@ public class HomePagePOM {
 	@FindBy(xpath="//input[@value= '1']")
 	private WebElement teachCourse;
 	
-	
 	@FindBy(id="registration_submit")
 	private WebElement registerbutton;
+	
+	@FindBy(id="login")
+	private WebElement loginUsername;
+	
+	@FindBy(id="password")
+	private WebElement loginPassword;
+	
+	@FindBy(xpath="//button[text()='Login']")
+	private WebElement loginButton;
 	
 	public void clickSignUpBtn(){
 		this.signUpBtn.click();
@@ -96,5 +104,17 @@ public class HomePagePOM {
 	public void registerbutton()
 	{
 		this.registerbutton.click();
+	}
+	public void loginUsername()
+	{
+		this.loginUsername.sendKeys("payal1234");
+	}
+	public void loginPassword()
+	{
+		this.loginPassword.sendKeys("Kingofhearts1.");
+	}
+	public void loginButton()
+	{
+		this.loginButton.click();
 	}
 }
